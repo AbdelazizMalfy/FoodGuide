@@ -1,0 +1,18 @@
+<% include partials/header %>
+
+<div class="container text-center">
+    <h1 class="my-3"><strong><%=restaurant.name %></strong>- <%= restaurant.rating %> </h1>
+    <img src="<%= restaurant.image %>" alt="">
+    <p class="my-3"><strong>Address: </strong> <i><%= restaurant.address %></i></p>
+    <a href="/restaurants/<%= restaurant._id %>/edit" class="btn btn-success mb-3">Edit Restaurant</a>
+    <form action="/restaurants/<%=restaurant.id%>?_method=DELETE" method="POST" style="display:inline;">
+        <button class="btn btn-danger mb-3">Delete Restaurant</button>
+    </form>
+</div>
+
+
+
+
+
+<% include partials/footer %>
+

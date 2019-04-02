@@ -1,0 +1,16 @@
+<% include partials/header %>
+<div class="container">
+    <h1 class="text-center py-3">Edit <%= restaurant.name %> </h1>
+    <div class="container">
+        <form class="" action="/restaurants/<%= restaurant._id%>?_method=PUT" method="POST" >
+            <input type="text" name="name" value="<%= restaurant.name %>" class="form-control">
+            <input type="text" name="image" value="<%= restaurant.image %>" class="form-control my-2">
+            <input type="text" name="address" value="<%= restaurant.address %>" class="form-control">
+            <button class="btn btn-success btn-block my-2">Edit restaurant</button>
+        </form>
+    </div>
+</div>
+
+
+
+<% include partials/footer %>

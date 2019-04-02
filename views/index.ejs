@@ -1,0 +1,33 @@
+<% include partials/header %>
+
+
+<div class="container">
+    
+    <h1 class="text-center my-4">The Most Viewed restaurants</h1>
+    
+    <div class="row">
+        <% restaurants.forEach(function(restaurant){ %>
+            <div class="col-md-4 ">
+                <div class="card text-center my-3">
+                    <div class="card-image">
+                        <img src="<%= restaurant.image %>" class="img-fluid">        
+                    </div> 
+                    <div class="card-body">
+                        <div class="card-title">
+                                <h5><strong><%= restaurant.name%></strong> </h5>
+                        </div>
+                        <div class="card-text">
+                                <p><%=restaurant.address%></p>
+                                <a href="/restaurants/<%= restaurant._id%>"  class="btn btn-success">Show More</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+       <% }) %>
+    </div>
+
+
+
+</div>
+
+<% include partials/footer %>
